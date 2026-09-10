@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://d3ua6w6l1i685"]
 
+[ext_resource type="Theme" uid="uid://civbbqpwq2br" path="res://Base.tres" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://2yumkfqrtfyw" path="res://control.gd" id="1_ig7tw"]
 
-[node name="Control" type="Control" unique_id=1917762108]
-layout_mode = 3
+[node name="Root" type="PanelContainer" unique_id=2057867824]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_0xm2m")
 script = ExtResource("1_ig7tw")

@@ -10,10 +10,11 @@ var add: float = 0.0
 
 
 func _ready() -> void:
-	print(calc_loan(14150, 0.0669, 8))
+	print(calc_loan(14150, 6.69, 8))
 
 
-func calc_loan(loan:float, interest:float, installments:int):
+func calc_loan(loan:float, i_interest:float, installments:int):
+	var interest = i_interest/100
 	match pay_in:
 		false:
 			for i in installments:
@@ -22,4 +23,4 @@ func calc_loan(loan:float, interest:float, installments:int):
 				if compound:
 					loan += add
 	total_payment = loan + total_interest
-	return str("---Input---","\nLoan: ",loan,",\nInterest: ",interest,",\nInstallments: ",installments,",\nCompound: ",compound,"\n---Output---","\nTotal Interest: ",total_interest,",\nTotal Payment: ",total_payment)
+	return str("---Input---","\nLoan: ",loan,",\nInterest: ",interest*100,"%,\nInstallments: ",installments,",\nCompound: ",compound,",\nPay-In: ",pay_in,",\n---Output---","\nTotal Interest: ",total_interest,",\nTotal Payment: ",total_payment)
